@@ -46,6 +46,35 @@
         <div class="container">
           <!-- Example row of columns -->
             <h1>Search for Partners</h1>
+            <div class="btn-group">
+                <button type="button" class="btn btn-info dropdown-toggle" id="Filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled>Filter by <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a id="btn12-1am">12am - 1am</a></li>
+                    <li><a id="btn1-2am">1am - 2am</a></li>
+                    <li><a id="btn2-3am">2am - 3am</a></li>
+                    <li><a id="btn3-4am">3am - 4am</a></li>
+                    <li><a id="btn4-5am">4am - 5am</a></li>
+                    <li><a id="btn5-6am">5am - 6am</a></li>
+                    <li><a id="btn6-7am">6am - 7am</a></li>
+                    <li><a id="btn7-8am">7am - 8am</a></li>
+                    <li><a id="btn8-9am">8am - 9am</a></li>
+                    <li><a id="btn9-10am">9am - 10am</a></li>
+                    <li><a id="btn10-11am">10am - 11am</a></li>
+                    <li><a id="btn11-12pm">11am - 12pm</a></li>
+                    <li><a id="btn12-1pm">12pm - 1pm</a></li>
+                    <li><a id="btn1-2pm">1pm - 2pm</a></li>
+                    <li><a id="btn2-3pm">2pm - 3pm</a></li>
+                    <li><a id="btn3-4pm">3pm - 4pm</a></li>
+                    <li><a id="btn4-5pm">4pm - 5pm</a></li>
+                    <li><a id="btn5-6pm">5pm - 6pm</a></li>
+                    <li><a id="btn6-7pm">6pm - 7pm</a></li>
+                    <li><a id="btn7-8pm">7pm - 8pm</a></li>
+                    <li><a id="btn8-9pm">8pm - 9pm</a></li>
+                    <li><a id="btn9-10pm">9pm - 10pm</a></li>
+                    <li><a id="btn10-11pm">10pm - 11pm</a></li>
+                    <li><a id="btn11-12am">11pm - 12am</a></li>
+                </ul>
+            </div>
             <div class="row">
                 <div class="col-lg-12" id="partnerlistBorder" style="background-color: whitesmoke">
                     <table class="table table-condensed">
@@ -167,36 +196,376 @@
                 });
             });
             
-            });
+            /*Sorting by workout time*/
+            rootRef.orderByChild("workouthours").equalTo('12am - 1am').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn12-1am").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            
+            rootRef.orderByChild("workouthours").equalTo('1am - 2am').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn1-2am").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('2am - 3am').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn2-3am").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('3am - 4am').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn3-4am").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('4am - 5am').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn4-5am").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('5am - 6am').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn5-6am").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('6am - 7am').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn6-7am").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('7am - 8am').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn7-8am").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('8am - 9am').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn8-9am").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('9am - 10am').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn9-10am").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('10am - 11am').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn10-11am").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('11am - 12pm').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn11-12pm").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('12pm - 1pm').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn12-1pm").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('1pm - 2pm').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn1-2pm").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('2pm - 3pm').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn2-3pm").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('3pm - 4pm').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn3-4pm").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('4pm - 5pm').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn4-5pm").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('5pm - 6pm').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn5-6pm").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('6pm - 7pm').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn6-7pm").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('7pm - 8pm').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn7-8pm").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('8pm - 9pm').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn8-9pm").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('9pm - 10pm').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn9-10pm").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('10pm - 11pm').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn10-11pm").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+            rootRef.orderByChild("workouthours").equalTo('11pm - 12am').on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#btn12-1am").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+                });
+        });
             /*Disabled and Re-enabling buttons for sorting purposes*/
             $("#btnClearList").click( function(){
-                  $('td').remove();
-                  $("#sortName").attr("disabled", false);
-                  $("#sortWType").attr("disabled", false);
-                  $("#sortCity").attr("disabled", false);
+                $('td').remove();
+                $("#sortName").attr("disabled", false);
+                $("#sortWType").attr("disabled", false);
+                $("#sortCity").attr("disabled", false);
+                $("#Filter").attr("disabled", false);
+                
               });
             
             $("#sortName").click( function(){
-                  $(this).attr("disabled", true);
-                  $("#sortWType").attr("disabled", true);
-                  $("#sortCity").attr("disabled", true);
+                $(this).attr("disabled", true);
+                $("#sortWType").attr("disabled", true);
+                $("#sortCity").attr("disabled", true);
             });
             
             $("#sortWType").click( function(){
-                  $(this).attr("disabled", true);
-                  $("#sortName").attr("disabled", true);
-                  $("#sortCity").attr("disabled", true);
+                $(this).attr("disabled", true);
+                $("#sortName").attr("disabled", true);
+                $("#sortCity").attr("disabled", true);
             });
             
             $("#sortCity").click( function(){
-                  $(this).attr("disabled", true);
-                  $("#sortName").attr("disabled", true);
-                  $("#sortWType").attr("disabled", true);
+                $(this).attr("disabled", true);
+                $("#sortName").attr("disabled", true);
+                $("#sortWType").attr("disabled", true);
             });
             
-                $("#btnReload").click(function(){
-                    location.reload();
-                });
+            $("#btnReload").click(function(){
+                location.reload();
+            });
             
             
             
