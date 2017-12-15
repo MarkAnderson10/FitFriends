@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FitFriends</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+        
+        <script src="app.js"></script>
+    </head>
+    <header>
+        <!--NAVBAR-->
+        <nav class="navbar navbar-static-top navbar-inverse">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle pull-left collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img alt="FitFriends" src="/assets/images/fitfriendsminilogo.png" width="35" height="35px">
+                </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="partner.html" style="color:white">Find a Partner</a></li>
+                        <li><a href="maps.html" style="color:white">Find a Gym</a></li>
+                        <li><a href="workouts.html" style="color:white">Workouts</a></li>
+                        <li class="hide" id="profileTab"><a href="profile.html" style="color:white">Profile</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+<!--TODO: add username to top of navbar when user is signed in-->
+                        <li><p class="navbar-text" id="WelcomeHeading"> </p></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+    <body>
+        <div class="container">
+          <!-- Example row of columns -->
+            <h1>Search for Partners</h1>
+            <div class="row">
+                <div class="col-lg-12" id="partnerlistBorder" style="background-color: whitesmoke">
+                    <table class="table table-condensed">
+                        <div>
+                            <label>Sort by:</label>
+                            <button class="btn btn-info btn-md" id="sortName" disabled> Name</button>
+                            <button class="btn btn-info btn-md" id="sortWType" disabled> Workout Type</button>
+                            <button class="btn btn-info btn-md" id="sortCity" disabled> City</button>
+                            <button class="btn btn-danger btn-md" id="btnClearList"> Clear list</button>
+                            <button class="btn btn-primary btn-md" id="btnReload" onclick="btnReload();"> Reload List</button>
+                        </div>
+                        <p>*Note: Please clear the list before sorting</p>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>City</th>
+                            <th>Workout Time</th>
+                            <th>Workout Type</th>
+                            <th>Workout Location</th>
+                            <th>Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_body">
+
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <footer class="footer navbar-fixed-bottom">
+        &copy; FitFriends 2017
+            Developed by: Mark Anderson
+        </footer>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+        
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB5gCXiQFrtZAvu4IIwDUbk_ogwsFULZ_o",
+            authDomain: "fitfriends-6ca12.firebaseapp.com",
+            databaseURL: "https://fitfriends-6ca12.firebaseio.com",
+            projectId: "fitfriends-6ca12",
+            storageBucket: "fitfriends-6ca12.appspot.com",
+            messagingSenderId: "894823201524"
+        };
+        firebase.initializeApp(config);
+        var database = firebase.database();
+        var ref = database.ref('Users');
+        
+        /*Adds all user information to partner page*/
+        $(document).ready(function(){
+            var rootRef = database.ref().child("Users");
+            
+            rootRef.on("child_added", snap => {
+                var name = snap.child("name").val();
+                var age = snap.child("age").val();
+                var city = snap.child("city").val();
+                var email = snap.child("email").val();
+                var workouthours = snap.child("workouthours").val();
+                var workouttype = snap.child("workouttype").val();
+                var preferredgym = snap.child("preferredgym").val();
+                
+                
+                $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                
+                
+            });
+
+            /*Sorting by name values*/
+            rootRef.orderByChild("name").on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#sortName").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+            });
+            
+            /*Sorting by workout type*/
+            rootRef.orderByChild("workouttype").on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#sortWType").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+            });
+            
+            /*Sorting by city*/
+            rootRef.orderByChild("city").on("child_added", function(snapshot) {
+                var name = snapshot.child("name").val();
+                var age = snapshot.child("age").val();
+                var city = snapshot.child("city").val();
+                var email = snapshot.child("email").val();
+                var workouthours = snapshot.child("workouthours").val();
+                var workouttype = snapshot.child("workouttype").val();
+                var preferredgym = snapshot.child("preferredgym").val();
+                
+                $("#sortCity").click (function() {
+                    $("#table_body").append("<tr id='changeSort'><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td><td>" + workouthours + "</td><td>" + workouttype + "</td><td>" + preferredgym + 
+                                        "</td><td>" + email + "</td></tr>");
+                });
+            });
+            
+            });
+            /*Disabled and Re-enabling buttons for sorting purposes*/
+            $("#btnClearList").click( function(){
+                  $('td').remove();
+                  $("#sortName").attr("disabled", false);
+                  $("#sortWType").attr("disabled", false);
+                  $("#sortCity").attr("disabled", false);
+              });
+            
+            $("#sortName").click( function(){
+                  $(this).attr("disabled", true);
+                  $("#sortWType").attr("disabled", true);
+                  $("#sortCity").attr("disabled", true);
+            });
+            
+            $("#sortWType").click( function(){
+                  $(this).attr("disabled", true);
+                  $("#sortName").attr("disabled", true);
+                  $("#sortCity").attr("disabled", true);
+            });
+            
+            $("#sortCity").click( function(){
+                  $(this).attr("disabled", true);
+                  $("#sortName").attr("disabled", true);
+                  $("#sortWType").attr("disabled", true);
+            });
+            
+                $("#btnReload").click(function(){
+                    location.reload();
+                });
+            
+            
+            
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                console.log('user', user)
+                document.getElementById("profileTab").classList.remove("hide");
+                document.getElementById("WelcomeHeading").innerHTML = "Welcome " + firebase.auth().currentUser.email;
+                user.updateProfile({
+                    displayName: "FITFRIENDS"
+                }).then(function() {
+                    //update successful.
+                } 
+        )}
+        });
+    
+        
+        </script>
+    </body>
+</html>

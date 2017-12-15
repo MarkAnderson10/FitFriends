@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FitFriends</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+        
+        <script src="app.js"></script>
+        
+    </head>
+    <header>
+        <!--NAVBAR-->
+        <nav class="navbar navbar-static-top navbar-inverse">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle pull-left collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img alt="FitFriends" src="/assets/images/fitfriendsminilogo.png" width="35" height="35px">
+                </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="partner.html" style="color:white">Find a Partner</a></li>
+                        <li><a href="maps.html" style="color:white">Find a Gym</a></li>
+                        <li><a href="workouts.html" style="color:white">Workouts</a></li>
+                        <li class="active"><a href="profile.html" style="color:white">Profile</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><p class="navbar-text" id="WelcomeHeading"></p></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        
+</header>
+    <body>
+        <div class="container" id="profilecontainer" style="background-color: #9C9C9C">
+          <!-- Example row of columns -->
+        <div class="row" id="profilerow" style="background-color: #9c9c9c">
+            <h1 class="welcomeprofile" id="WelcomeHeader" style="background-color: #9c9c9c"></h1>    
+        </div>
+          <div class="row">
+        <div class="row user-infos" id="userinfos" style="background-color: #9c9c9c">
+            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xs-offset-0 col-sm-offset-0 col-md-offset-1 col-lg-offset-1">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">User information</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                    
+                            <div class=" col-md-6 col-lg-9">
+                                <table class="table table-user-information" id="userTable">
+                                    <tbody>
+                                    <tr>
+                                        <td>Name:</td>
+                                        <td>
+                                        <div class="form-group">
+                                            <div class="col-sm-10">
+                                                <form>
+                                                <input type="text" class="form-control" name= "name" id="txtName" placeholder="Please enter your name" required>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Age:</td>
+                                        <td>
+                                        <div class="form-group">
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" name= "age" id="txtAge" placeholder="Please enter your age" required>
+                                            </div>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>City:</td>
+                                        <td>
+                                        <div class="form-group">
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" name= "city" id="txtCity" placeholder="Please enter your city" required>
+                                            </div>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Contact Email:</td>
+                                        <td>
+                                        <div class="form-group">
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" name= "email" id="txtContactEmail" placeholder="Please enter your contact email" required>
+                                            </div>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Preferred Gym:</td>
+                                        <td>
+                                        <div class="form-group">
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" name= "gymlocation" id="txtPreGym" placeholder="Please enter your preferred gym" required/>
+                                            </div>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Preferred Workout Hours:</td>
+                                        <td>
+                                        <div class="form-group">
+                                            <div class="col-sm-10">
+                                                <div class="btn-group">
+                                                    <select id="hourlist">
+                                                        <option value="null">Select hours</option>
+                                                        <option value="12am - 1am">12am - 1am</option>
+                                                        <option value="1am - 2am">1am - 2am</option>
+                                                        <option value="2am - 3am">2am - 3am</option>
+                                                        <option value="3am - 4am">3am - 4am</option>
+                                                        <option value="4am - 5am">4am - 5am</option>
+                                                        <option value="5am - 6am">5am - 6am</option>
+                                                        <option value="6am - 7am">6am - 7am</option>
+                                                        <option value="7am - 8am">7am - 8am</option>
+                                                        <option value="8am - 9am">8am - 9am</option>
+                                                        <option value="9am - 10am">9am - 10am</option>
+                                                        <option value="10am - 11am">10am - 11am</option>
+                                                        <option value="11am - 12pm">11am - 12pm</option>
+                                                        <option value="12pm - 1pm">12pm - 1pm</option>
+                                                        <option value="1pm - 2pm">1pm - 2pm</option>
+                                                        <option value="2pm - 3pm">2pm - 3pm</option>
+                                                        <option value="3pm - 4pm">3pm - 4pm</option>
+                                                        <option value="4pm - 5pm">4pm - 5pm</option>
+                                                        <option value="5pm - 6pm">5pm - 6pm</option>
+                                                        <option value="6pm - 7pm">6pm - 7pm</option>
+                                                        <option value="7pm - 8pm">7pm - 8pm</option>
+                                                        <option value="8pm - 9pm">8pm - 9pm</option>
+                                                        <option value="9pm - 10pm">9pm - 10pm</option>
+                                                        <option value="10pm - 11pm">10pm - 11pm</option>
+                                                        <option value="11pm - 12am">11pm - 12am</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Preferred Workout Type:</td>
+                                        <td>
+                                        <div class="form-group">
+                                            <div class="col-sm-10">
+                                                <div class="form-group">
+                                                    <div class="col-sm-">
+                                                        <div class="btn-group">
+                                                            <select id="workouttype">
+                                                                <option value="null">Select workout type</option>
+                                                                <option value="WeightLifter">WeightLifter</option>
+                                                                <option value="Powerlifter">Powerlifter</option>
+                                                                <option value="Cardio">Cardio</option>
+                                                                <option value="Yoga">Yoga</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                            <button class="btn btn-sm btn-success" type="submit" id="btnSave" onclick="submitUser()"><i class="glyphicon glyphicon-ok"></i> Save</button>
+                        <div class="container">
+                            
+                        
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+    
+        <footer class="footer navbar-fixed-bottom">
+        &copy; FitFriends 2017
+            Developed by: Mark Anderson
+        </footer>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB5gCXiQFrtZAvu4IIwDUbk_ogwsFULZ_o",
+            authDomain: "fitfriends-6ca12.firebaseapp.com",
+            databaseURL: "https://fitfriends-6ca12.firebaseio.com",
+            projectId: "fitfriends-6ca12",
+            storageBucket: "fitfriends-6ca12.appspot.com",
+            messagingSenderId: "894823201524"
+        };
+        firebase.initializeApp(config);
+        var database = firebase.database();
+        var ref = database.ref('Users/');
+    
+        
+        function submitUser() {
+        var hourValue = document.getElementById("hourlist").value;
+        var workoutTypeValue = document.getElementById("workouttype").value;
+        var userId = firebase.auth().currentUser.uid;
+        document.getElementById("btnSave").disabled = 'disabled'
+		var data = {
+            name: txtName.value,
+            age: txtAge.value,
+            city: txtCity.value,
+            email: txtContactEmail.value,
+            preferredgym: txtPreGym.value,
+            workouthours: hourValue,
+            workouttype: workoutTypeValue,
+            uid: userId
+        }
+        ref.push(data);
+        }
+        
+            
+    
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                console.log('user', user)
+                document.getElementById("WelcomeHeading").innerHTML = "Welcome " + firebase.auth().currentUser.email;
+                user.updateProfile({
+                    displayName: "FITFRIENDS"
+                }).then(function() {
+                    //update successful.
+                }
+        )}
+        });
+        
+    
+        
+        </script>
+    </body>
+</html>

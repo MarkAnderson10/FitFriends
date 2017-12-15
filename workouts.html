@@ -1,0 +1,158 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FitFriends</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+        
+        <script src="app.js"></script>
+    </head>
+    <header>
+        <!--NAVBAR-->
+        <nav class="navbar navbar-static-top navbar-inverse">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle pull-left collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img alt="FitFriends" src="/assets/images/fitfriendsminilogo.png" width="35" height="35px">
+                </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="partner.html" style="color:white">Find a Partner</a></li>
+                        <li><a href="maps.html" style="color:white">Find a Gym</a></li>
+                        <li class="active"><a href="workouts.html" style="color:white">Workouts</a></li>
+                        <li class="hide" id="profileTab"><a href="profile.html" style="color:white">Profile</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><p class="navbar-text" id="WelcomeHeading"></p></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        
+    </header>
+    <body>
+        <div class="container">
+          <!-- Example row of columns -->
+          <h2>Workouts</h2>
+                <div class="panel-body">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1" class="workoutTitle">Chest</a>
+                      </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                      <ul class="list-group">
+                        <li class="list-group-item"><h4>Barbell bench press <br> 3 sets <br> 10 repetitions</h4></li>
+                        <li class="list-group-item"><h4>Dumbbell flyes <br> 4 sets <br> 6-8 repetitions</h4></li>
+                        <li class="list-group-item"><h4>Dumbbell bench press <br> 3 sets <br> 10 repetitions</h4></li>
+                        <li class="list-group-item"><h4>Pushups <br> 3 sets <br> Until failure</h4>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            <div class="panel-body">
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse2" class="workoutTitle">Back</a>
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><h4>Front lat pulldown <br> 3 sets <br> 10-12 repetitions</h4></li>
+                    <li class="list-group-item"><h4>Seated rows <br> 3 sets <br> 10 repetitions</h4></li>
+                    <li class="list-group-item"><h4>Single arm dumbbell row <br> 3 sets <br> 10 repetitions</h4></li>
+                      <li class="list-group-item"><h4>Pull-ups <br> 3 sets <br> Until failure</h4></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel-body">
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse3" class="workoutTitle">Arms</a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><h4>Dumbbell curls  <br> 3 sets <br> 10-12 repetitions</h4></li>
+                    <li class="list-group-item"><h4>Tricep pushdown <br> 3 sets <br> 12-15 repetitions</h4></li>
+                    <li class="list-group-item"><h4>Shoulder press <br> 3 sets <br> 10 repetitions</h4></li>
+                    <li class="list-group-item"><h4>Barbell curls <br> 3 sets <br> 10-12 repetitions</h4></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel-body">
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse4" class="workoutTitle">Legs</a>
+                  </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><h4>Barbell full squat <br> 3 sets <br> 10 repetitions</h4></li>
+                    <li class="list-group-item"><h4>Leg extensions <br> 3 sets <br> 10-12 repetitions</h4></li>
+                    <li class="list-group-item"><h4>Seated leg curl <br> 3 sets <br> 10-12 repetitions</h4></li>
+                    <li class="list-group-item"><h4>Standing calf raises <br> 3 sets <br> 10-12 repetitions</h4></li>
+                    <li class="list-group-item"><h4>Leg press <br> 3 sets <br> 12-15 repetitions</h4></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+    
+        </div>
+        <footer class="footer navbar-fixed-bottom">
+        &copy; FitFriends 2017
+            Developed by: Mark Anderson
+        </footer>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+        
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB5gCXiQFrtZAvu4IIwDUbk_ogwsFULZ_o",
+            authDomain: "fitfriends-6ca12.firebaseapp.com",
+            databaseURL: "https://fitfriends-6ca12.firebaseio.com",
+            projectId: "fitfriends-6ca12",
+            storageBucket: "fitfriends-6ca12.appspot.com",
+            messagingSenderId: "894823201524"
+        };
+        firebase.initializeApp(config);
+        
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                console.log('user', user)
+                document.getElementById("WelcomeHeading").innerHTML = "Welcome " + firebase.auth().currentUser.email;
+                document.getElementById("profileTab").classList.remove("hide");
+                user.updateProfile({
+                    displayName: "FITFRIENDS"
+                }).then(function() {
+                    //update successful.
+                } 
+        )}
+        });
+        </script>
+    
+    </body>
+</html>

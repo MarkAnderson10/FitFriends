@@ -1,0 +1,316 @@
+body {
+    
+    background-color: #9C9C9C;
+    font-family: Raleway;
+    
+}
+
+#partnerlistBorder {
+    
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    min-height: 0;
+    min-width: 0;
+    overflow:auto;
+    
+}
+
+
+#threeParagraphs {
+    padding-top: 0px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    margin-top: 25px;
+}
+
+#mainpageColor {
+    
+    background-color: #222222
+}
+
+.jumbotron h1 {
+    
+    color: ;
+    
+}
+.welcomeprofile {
+    
+    background-color: ghostwhite;
+}
+
+#profilecontainer{
+    
+    background-color: ghostwhite;
+}
+
+#profilerow {
+    
+    background-color: ghostwhite;
+}
+#btnSort {
+    
+    margin: 0px 0px 5px 0px;
+    
+}
+#btnLogout {
+    
+    padding: 0px 5px 0px 5px;
+    
+}
+#userinfos{
+    
+    background-color: ghostwhite;
+    
+}
+
+.jumbotron img {
+    
+    width: 300px;
+}
+
+.container h1 {
+    
+    font-size: 50px;
+    text-align: center;
+}
+
+.container p {
+    
+    text-align: left;
+    font-size: 13px;
+    
+}
+.container h2 {
+    
+    text-align: center;
+    
+}
+
+.panel > .panel-heading {
+    
+    background-color: dodgerblue;
+    color: white;
+
+}
+
+.panel > .panel-body {
+    
+    min-height: 0;
+    min-width: 0;
+    overflow:auto;
+    
+}
+
+.workoutTitle {
+    
+    font-size: 25px;
+    
+}
+
+.row {
+    
+    background-color: white;
+    border-width: thin;
+    min-height: 0;
+    min-width: 0;
+    overflow:visible;
+}
+nav { 
+    
+    #padding-left: 375px;
+    #padding-right: 415px;
+    
+}
+
+.partnertitle {
+    
+    text-align: center;
+    font-size: 60px;
+}
+
+.container {
+    
+    background-color: ;
+    margin: 0 auto;
+    padding-top: 25px;
+    
+
+}
+
+footer {
+    
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #222222;
+    text-align: center;
+    color: white;
+    
+}
+
+.navbar {
+    
+    margin-bottom: 0;
+    -webkit-box-shadow: 0 1px 41px 1px;
+    -moz-box-shadow: 0 1px 41px 1px;
+    box-shadow: 0 1px 41px 1px;
+}
+
+.navbar .navbar-nav .navbar-right { 
+    
+    margin-bottom: 0;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    margin: auto;
+    
+}
+
+
+.navbar-brand {
+    
+    padding-top: 9px;
+}
+
+
+.navbar-btn {
+    
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.jumbo-main {
+    
+    background-image: url('/assets/images/fitfriendsjumbo.jpg');
+    text-align: center;
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 0px;
+    /*padding-bottom: -20%;
+    padding-top: -20%;*/
+   
+}
+
+
+
+.jumbo-login {
+    
+    background-color: ghostwhite;
+    
+}
+#map {
+    
+    height: 500px;
+    width: 750px;
+    margin: auto;
+    
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    
+    min-height: 300px;
+    margin-bottom: 100px;
+    clear: both;
+    
+}
+
+/* LOGIN/REGISTRATION MODAL */
+
+.nav-tabs {
+    margin-bottom: 15px;
+}
+
+.modal-body {
+
+    padding-right: 20px;
+    padding-left: 20px;
+    
+}
+
+#btnSubmitLogin {
+    
+    /*margin-right: 00px;*/
+    
+}
+
+#btnSignUp {
+    
+    /*margin-left: 100px;*/
+    
+}
+
+
+/*Profile Page*/
+#btnSave {
+    
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: -3px;
+    
+}
+
+#userTable {
+    
+    margin-left: 120px;
+    
+}
+
+/*GOOGLE MAP API SEARCH OPTION*/
+.pac-card {
+    margin: 10px 10px 0 0;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    font-family: Roboto;
+}
+
+#pac-container {
+    padding-bottom: 12px;
+    margin-right: 12px;
+}
+
+.pac-controls {
+    display: inline-block;
+    padding: 5px 11px;
+}
+
+.pac-controls label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 400px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 400px;
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+}
+
+#title {
+    color: #fff;
+    background-color: #4d90fe;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 6px 12px;
+}
+#target {
+    width: 345px;
+}
